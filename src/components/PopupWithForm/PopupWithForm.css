@@ -1,0 +1,108 @@
+.popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s linear;
+}
+.popup_active {
+  transition: visibility 0s, opacity 0.3s linear;
+  visibility: visible;
+  opacity: 1;
+}
+.popup__close-button {
+  background-image: url(../../images/close-button.svg);
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border: none;
+  box-sizing: border-box;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+}
+
+.popup__close-button:hover {
+  opacity: 0.6;
+}
+
+.popup__container {
+  background: #ffffff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: 430px;
+  margin-top: 195px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.popup__enter {
+  width: 358px;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 54px;
+  padding-bottom: 13px;
+}
+
+.popup__enter:last-of-type {
+  margin-top: 30px;
+}
+.popup__form {
+  max-width: 358px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+.popup__submit-button {
+  width: 358px;
+  height: 50px;
+  background: #000000;
+  border-radius: 2px;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 48px;
+  margin-bottom: 37px;
+  cursor: pointer;
+}
+
+.popup__submit-button:hover {
+  opacity: 0.8;
+}
+
+.popup__title {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-top: 34px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  max-width: 330px;
+}

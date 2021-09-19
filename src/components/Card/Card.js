@@ -16,17 +16,9 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
 
   return (
     <article className="element">
-     {/*  <div className="element__image-container">
-        <img
-          className="element__image"
-           src={card.link}
-          alt={card.name} 
-          onClick={handleClick}
-        />
-      </div> */}
       <div className="element__title">
-        <h2 className="element__text-title">{/* {card.name} */}Автор книги</h2>
-        <p className="element__text-subtitle">Название книги</p>
+        <h2 className="element__text-title">{card.bookAuthor}</h2>
+        <p className="element__text-subtitle">{card.bookName}</p>
       </div>
       <button
         type="button"

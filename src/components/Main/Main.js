@@ -9,26 +9,20 @@ function Main(props) {
         <h2 className="main__title">Добавить книгу в список</h2>
         <button
           type="button"
-          onClick={props.onAddPlace}
+          onClick={props.onAddBook}
           className="main__add-button"
         ></button>
       </section>
       <section className="main__elements">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        {/* {props.cards.map((card) => (
+        {props.cards.map((card, i) => (
           <Card
-            key={card._id}
+            key={i}
             card={card}
-            onCardClick={props.onCardClick}
+            /* onCardClick={props.onCardClick}
             onCardLike={props.onCardLike}
-            onCardDelete={props.onCardDelete}
+            onCardDelete={props.onCardDelete} */
           />
-        ))} */}
+        ))}
       </section>
     </main>
   );
