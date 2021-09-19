@@ -1,0 +1,59 @@
+.element {
+  background-color: #bfbbf8;
+  max-width: 282px;
+  height: 90px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.element__delete-button {
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 18px;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  border: none;
+  box-sizing: border-box;
+  background-size: contain;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.element__delete-button:hover {
+  opacity: 0.6;
+}
+
+.element__title {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+.element__text-title {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.element__text-subtitle {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding: 0;
+}
