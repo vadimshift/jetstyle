@@ -1,6 +1,5 @@
 .page {
   background-color: #214458;
-  min-height: 100vh;
 }
 .page__container {
   max-width: 880px;
@@ -8,5 +7,10 @@
   font-family: 'Inter', 'Arial', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
-
+.page__content {
+  flex: 1 0 auto;
+}
