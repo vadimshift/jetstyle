@@ -1,18 +1,11 @@
 import deleteIcon from "../../images/delete-icon.svg";
 import './Card.css';
 
-function Card({ card, onCardClick, onCardLike, onCardDelete }) {
-  /*  const handleClick = () => {
-    onCardClick(card);
-  };
-
-  const handleLikeClick = () => {
-    onCardLike(card);
-  };
+function Card({ card, onCardDelete }) {
 
   const handleDeleteClick = () => {
     onCardDelete(card);
-  }; */
+  };
 
   return (
     <article className="element">
@@ -23,7 +16,7 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
       <button
         type="button"
         className="element__delete-button"
-        /* onClick={handleDeleteClick} */
+        onClick={handleDeleteClick}
       >
         <img src={deleteIcon} alt="Кнопка удаления карточки" />
       </button>

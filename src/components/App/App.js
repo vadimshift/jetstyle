@@ -17,8 +17,22 @@ function App() {
     setIsAddBookPopupOpen(false);
   };
 
-  const [cards, setCards] = useState([]);
+  const handleCardDelete = (card) => {
+    console.log(card);
+  };
+
+  const [cards, setCards] = useState(() => {
+    const saved = localStorage.getItem('bookInLocalStorage');
+    const initialValue = JSON.parse(saved);
+    return initialValue || []; 
+  });
+
+  useEffect(() => {
+    localStorage.setItem('bookInLocalStorage', JSON.stringify(cards));
+  }, [cards]);
+
   console.log(cards);
+
   const handleAddBookSubmit = (data) => {
     setCards([data, ...cards]);
     closeAllPopups();
@@ -28,7 +42,11 @@ function App() {
     <div className='page'>
       <div className='page__container'>
         <Header />
-        <Main cards={cards} onAddBook={handleAddBookClick} />
+        <Main
+          cards={cards}
+          onAddBook={handleAddBookClick}
+          onCardDelete={handleCardDelete}
+        />
         <PopupWithForm />
         <AddBookPopup
           isOpen={isAddBookPopupOpen}
