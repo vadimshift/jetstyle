@@ -7,15 +7,15 @@ function AddBookPopup(props) {
     e.preventDefault();
     // Передаём значения управляемых компонентов во внешний обработчик
     props.onAddBook({
-      card_id,
+      id,
       bookAuthor,
       bookName,
     });
     setBookAuthor('');
     setBookName('');
   }
-  
-  const card_id = uuidv4();
+
+  const id = uuidv4();
 
   const [bookAuthor, setBookAuthor] = useState('');
   const [bookName, setBookName] = useState('');

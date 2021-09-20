@@ -19,7 +19,7 @@ function App() {
   };
 
   const handleCardDelete = (card) => {
-    console.log(card);
+    setCards((cards) => cards.filter((c) => c.id !== card.id));
   };
 
     const [cards, setCards] = useState(() => {

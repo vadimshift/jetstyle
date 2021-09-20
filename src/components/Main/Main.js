@@ -15,9 +15,9 @@ function Main(props) {
         ></button>
       </section>
       <section className="main__elements">
-        {props.cards.map((card, i) => (
+        {props.cards.map((card) => (
           <Card
-            key={i}
+            key={card.id}
             card={card}
             onCardDelete={props.onCardDelete} 
           />
