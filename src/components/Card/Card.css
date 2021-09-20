@@ -26,6 +26,26 @@
   opacity: 0.6;
 }
 
+.element__edit-button {
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 18px;
+  right: 50px;
+  border: none;
+  box-sizing: border-box;
+  background-size: contain;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.element__edit-button:hover {
+  opacity: 0.6;
+}
+
 .element__title {
   max-width: 250px;
   margin-left: auto;

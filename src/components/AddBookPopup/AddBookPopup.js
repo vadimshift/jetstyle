@@ -55,7 +55,7 @@ function AddBookPopup(props) {
         id='enterNameBook'
         name='name'
         placeholder='Название книги'
-        className='popup__enter popup__enter_type_name-bok'
+        className='popup__enter popup__enter_type_name-book'
         value={bookName || ''}
         onChange={hendleChangeBookName}
       />

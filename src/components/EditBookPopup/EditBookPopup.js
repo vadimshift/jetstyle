@@ -1,0 +1,69 @@
+import { useState } from "react";
+import PopupWithForm from "../PopupWithForm/PopupWithForm";
+
+function EditBookPopup(props) {
+  function handleSubmit(e) {
+    e.preventDefault();
+    // Передаём значения управляемых компонентов во внешний обработчик
+    props.onUpdateBook({
+      bookAuthorNew,
+      bookNameNew,
+    });
+  }
+
+  const [bookAuthorNew, setBookAuthorNew] = useState('');
+  const [bookNameNew, setBookNameNew] = useState('');
+
+  const hendleChangeBookAuthorNew = (e) => {
+    setBookAuthorNew(e.target.value);
+  };
+
+  const hendleChangeBookNameNew = (e) => {
+    setBookNameNew(e.target.value);
+  };
+
+/*   const currentUser = useContext(CurrentUserContext);
+
+  useEffect(() => {
+    setName(currentUser.name);
+    setDescription(currentUser.about);
+  }, [currentUser]);
+ */
+  return (
+    <PopupWithForm
+      name="edit-book"
+      title="Редактировать книгу"
+      buttonTitle="Сохранить"
+      onSubmit={handleSubmit}
+      isOpen={props.isOpen}
+      onClose={props.onClose}
+    >
+      <input
+        required
+        minLength="2"
+        maxLength="40"
+        id="enterBookAuthorNew"
+        name="name"
+        type="text"
+        placeholder="Автор"
+        className="popup__enter popup__enter_type_book-author-new"
+        value={bookAuthorNew || ""}
+        onChange={hendleChangeBookAuthorNew}
+      />
+      <input
+        required
+        minLength="2"
+        maxLength="200"
+        id="enterBookNameNew"
+        name="about"
+        type="text"
+        placeholder="Название книги"
+        className="popup__enter popup__enter_type_book-name-new"
+        value={bookNameNew || ""}
+        onChange={hendleChangeBookNameNew}
+      />
+    </PopupWithForm>
+  );
+}
+
+export default EditBookPopup;

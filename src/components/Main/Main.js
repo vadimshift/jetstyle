@@ -20,6 +20,7 @@ function Main(props) {
             key={card.id}
             card={card}
             onCardDelete={props.onCardDelete} 
+            onCardEdit={props.onCardEdit}
           />
         ))}
       </section>
