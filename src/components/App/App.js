@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import './App.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -21,7 +22,7 @@ function App() {
     console.log(card);
   };
 
-  const [cards, setCards] = useState(() => {
+    const [cards, setCards] = useState(() => {
     const saved = localStorage.getItem('bookInLocalStorage');
     const initialValue = JSON.parse(saved);
     return initialValue || []; 

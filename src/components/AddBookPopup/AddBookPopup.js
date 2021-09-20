@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid'; 
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 
 function AddBookPopup(props) {
@@ -6,12 +7,15 @@ function AddBookPopup(props) {
     e.preventDefault();
     // Передаём значения управляемых компонентов во внешний обработчик
     props.onAddBook({
+      card_id,
       bookAuthor,
       bookName,
     });
     setBookAuthor('');
     setBookName('');
   }
+  
+  const card_id = uuidv4();
 
   const [bookAuthor, setBookAuthor] = useState('');
   const [bookName, setBookName] = useState('');

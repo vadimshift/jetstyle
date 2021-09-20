@@ -1,6 +1,7 @@
 import Card from "../Card/Card";
 import './Main.css';
 
+
 function Main(props) {
 
   return (
