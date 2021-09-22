@@ -10,10 +10,28 @@ import EditBookPopup from '../EditBookPopup/EditBookPopup';
 function App() {
   const [isAddBookPopupOpen, setIsAddBookPopupOpen] = useState(false);
   const [isEditBookPopupOpen, setIsEditBookPopupOpen] = useState(false);
+  const [card, setCard] = useState('');
 
-  const handleEditBookClick = () => {
+  const handleEditBookClick = (openCard) => {
+    setCard(openCard);
     setIsEditBookPopupOpen(true);
   };
+
+
+  const handleEditBookSubmit = (newData) => {
+    //console.log(cards, card, newData)
+    const findCard = cards.find(book => book.id === card.id)
+    const newCard = {
+      id:findCard.id = card.id,
+      bookAuthor:findCard.bookAuthor = newData.bookAuthor,
+      bookName:findCard.bookName = newData.bookName
+    }
+    //setCards(() => cards.map(newCard))
+    //items = items.map(x => (x.id === item.id) ? item : x)
+    //console.log(findCard.id, card.id)
+    //console.log(newCard)
+    closeAllPopups();
+  }
 
   const closeAllPopups = () => {
     setIsAddBookPopupOpen(false);
@@ -62,7 +80,7 @@ function App() {
         <EditBookPopup
           isOpen={isEditBookPopupOpen}
           onClose={closeAllPopups}
-          /* onEdit={handleEditBookSubmit} */
+          onEditBook={handleEditBookSubmit}
         />
         <Footer />
       </div>

@@ -5,10 +5,12 @@ function EditBookPopup(props) {
   function handleSubmit(e) {
     e.preventDefault();
     // Передаём значения управляемых компонентов во внешний обработчик
-    props.onUpdateBook({
-      bookAuthorNew,
-      bookNameNew,
+    props.onEditBook({
+      bookAuthor: bookAuthorNew,
+      bookName: bookNameNew,
     });
+    setBookAuthorNew('');
+    setBookNameNew('');
   }
 
   const [bookAuthorNew, setBookAuthorNew] = useState('');
@@ -22,13 +24,6 @@ function EditBookPopup(props) {
     setBookNameNew(e.target.value);
   };
 
-/*   const currentUser = useContext(CurrentUserContext);
-
-  useEffect(() => {
-    setName(currentUser.name);
-    setDescription(currentUser.about);
-  }, [currentUser]);
- */
   return (
     <PopupWithForm
       name="edit-book"

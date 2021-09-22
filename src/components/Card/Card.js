@@ -9,7 +9,7 @@ function Card({ card, onCardDelete, onCardEdit }) {
   };
 
   const handleEditBookClick = () => {
-    onCardEdit();
+    onCardEdit(card);
   };
 
   return (
