@@ -35,7 +35,7 @@ function EditBookPopup(props) {
     >
       <input
         required
-        minLength="2"
+        minLength="3"
         maxLength="40"
         id="enterBookAuthorNew"
         name="name"
@@ -48,7 +48,7 @@ function EditBookPopup(props) {
       <input
         required
         minLength="2"
-        maxLength="200"
+        maxLength="40"
         id="enterBookNameNew"
         name="about"
         type="text"

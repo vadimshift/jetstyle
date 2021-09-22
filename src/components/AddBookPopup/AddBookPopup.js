@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid'; 
+import { v4 as uuidv4 } from 'uuid';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 
 function AddBookPopup(props) {
@@ -15,6 +15,7 @@ function AddBookPopup(props) {
     setBookName('');
   }
 
+  //генерируем id карточки
   const id = uuidv4();
 
   const [bookAuthor, setBookAuthor] = useState('');
@@ -30,8 +31,8 @@ function AddBookPopup(props) {
 
   return (
     <PopupWithForm
-      name='add-place'
-      title='Новая книга'
+      name='add-book'
+      title='Добавьте новую книгу'
       buttonTitle='Сохранить'
       onSubmit={handleSubmit}
       isOpen={props.isOpen}
@@ -39,7 +40,7 @@ function AddBookPopup(props) {
     >
       <input
         required
-        minLength='2'
+        minLength='3'
         maxLength='40'
         id='enterAuthorBook'
         name='author'
@@ -52,6 +53,8 @@ function AddBookPopup(props) {
       <input
         required
         type='text'
+        minLength='3'
+        maxLength='40'
         id='enterNameBook'
         name='name'
         placeholder='Название книги'

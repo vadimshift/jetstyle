@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="header">
       <img className="header__logo" src={logo} alt="Логотип проекта" />
-      <h1 className="header__title">Jet Style Book</h1>
+      <h1 className="header__title">JetStyle Book </h1>
     </header>
   );
 }

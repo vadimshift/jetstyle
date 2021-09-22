@@ -17,21 +17,19 @@ function App() {
     setIsEditBookPopupOpen(true);
   };
 
-
   const handleEditBookSubmit = (newData) => {
-    //console.log(cards, card, newData)
-    const findCard = cards.find(book => book.id === card.id)
+    //ищем нужную карточку
+    const findCard = cards.find((book) => book.id === card.id);
+    //обновляем информацию в карточке
     const newCard = {
-      id:findCard.id = card.id,
-      bookAuthor:findCard.bookAuthor = newData.bookAuthor,
-      bookName:findCard.bookName = newData.bookName
-    }
-    //setCards(() => cards.map(newCard))
-    //items = items.map(x => (x.id === item.id) ? item : x)
-    //console.log(findCard.id, card.id)
-    //console.log(newCard)
+      id: (findCard.id = card.id),
+      bookAuthor: (findCard.bookAuthor = newData.bookAuthor),
+      bookName: (findCard.bookName = newData.bookName),
+    };
+    //изменяем карточку в массиве
+    setCards(cards.map(item => item.id === newCard.id? newCard:item))
     closeAllPopups();
-  }
+  };
 
   const closeAllPopups = () => {
     setIsAddBookPopupOpen(false);
